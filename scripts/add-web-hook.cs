@@ -105,7 +105,7 @@ function exec(method, params) {
         result = 0,
         type = null,
         error = null;
-    if (status == 200 || status == 201) {
+    if (status == 200 || status == 201 || status == 301 || status == 302) {
         var br = new BufferedReader(new InputStreamReader(method.getResponseBodyAsStream())),
             line;
         while ((line = br.readLine()) != null) {
